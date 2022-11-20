@@ -15,9 +15,9 @@ const Layout = ({ pageTitle, children }) => {
 
     return (
         <div>
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <a className="navbar-item" style={{ color: "brown" }} href="/">
+                    <a className="navbar-item" style={{ color: "wheat" }} href="/">
                         BEAR'S CUP OF COFFEE
                     </a>
 
