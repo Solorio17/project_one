@@ -43,14 +43,11 @@ const Layout = ({ pageTitle, children }) => {
                                 <a class="navbar-item" href='/about'>
                                     About Us
                                 </a>
-                                <a class="navbar-item">
+                                <a class="navbar-item" href='/careers'>
                                     Careers
                                 </a>
-                                <a class="navbar-item">
-                                    Contact
-                                </a>
                                 <hr class="navbar-divider"></hr>
-                                <a class="navbar-item">
+                                <a class="navbar-item" href='/feedback'>
                                     Give us Feedback!
                                 </a>
                             </div>
@@ -73,7 +70,6 @@ const Layout = ({ pageTitle, children }) => {
             </nav>
 
             <main>
-                <h1>{pageTitle}</h1>
                 {children}
             </main>
         </div>
