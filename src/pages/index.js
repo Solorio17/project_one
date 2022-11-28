@@ -4,22 +4,22 @@ import Layout from "../components/layout";
 const HomePage = () => {
   return (
     <Layout>
-      <section class="hero is-fullheight" style={{ backgroundColor: "wheat" }}>
-        <div class="hero-body">
-          <p class="title">
+      <section className="hero is-fullheight" style={{ backgroundColor: "wheat" }}>
+        <div className="hero-body">
+          <p className="title">
             BEAR'S CUP OF COFFEE
           </p>
-          <p class="subtitle">
+          <p className="subtitle">
             " Happiness is not something readymade, you must first wait for bear to make it. "
           </p>
         </div>
       </section>
-      <section class="hero is-fullheight" style={{ backgroundColor: "brown" }}>
-        <div class="hero-body">
-          <p class="title">
+      <section className="hero is-fullheight" style={{ backgroundColor: "brown" }}>
+        <div className="hero-body">
+          <p className="title">
             BEAR'S CUP OF COFFEE
           </p>
-          <p class="subtitle">
+          <p className="subtitle">
             " Happiness is not something readymade, you must first wait for bear to make it. "
           </p>
         </div>
