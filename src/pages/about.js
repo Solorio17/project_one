@@ -1,54 +1,65 @@
 import * as React from "react"
 import Layout from "../components/layout";
+import './mystyles.scss';
+import FirstImage from '../images/roastedcoffee.jpg';
 
 const AboutPage = () => {
     return (
         <Layout >
-            <section class="hero is-dark">
+            <section className="hero is-dark">
                 <div className="hero-body">
-                    <p class="title">
+                    <p className="title">
                         About Us
                     </p>
                 </div>
             </section>
 
-            <div class="columns is-vcentered">
-                <div class="column is-6" >
-                    <p>Insert a short inspirational quote or a phrase about us</p>
+            <div className="columns is-gapless is-vcentered inspoOne">
+                <div className="column is-6">
+                    <p>"This is the part where you enjoy your coffee."</p>
                 </div>
-                <div class="column is-6">
-                    <p>Insert a picture here about something relevant. ex: cup of coffee</p>
+                <div className="column is-6">
+                    <img src={FirstImage} style={{ height: 'auto', width: '100vw' }}></img>
                 </div>
+            </div>
 
+            <div className="columns is-gapless ">
+                <div className="column is-2 logo">
+                    <p>B</p>
+                    <p>C</p>
+                    <p>O</p>
+                    <p>C</p>
+                </div>
+                <div className="column is-8">
+                    <h1 className="ourstory">Bears Cup of Coffee came to life through the idea of the bear himself.
+                        "Meow Meow Meow meow Meow  Meow Meow Meow Meow"
+                        ("I Always saw my mother drink expensive cheap coffee, she had spent
+                        thousands of dollars, and I knew I needed to take action.
+                        "). 5 Great Roasts to Choose from, we sought to curate the best blend
+                        of coffee beans and happiness. Each blend has great unique flavors and
+                        will take your coffee drinking experience to the next level.</h1>
+                </div>
+                <div className="column is-2 logo">
+                    <p>"MAKE YOUR MORNINGS RIGHT."</p>
+                </div>
             </div>
-            <div class="columns">
-                <div className="column is 2">
-                    Here Insert a color or logo or picture
+            <div className="columns">
+                <div className="column is-4 tstmnl">
+                    <h1>" I am a first time customer here and I must say that i'm really enjoying this place." - Maria</h1>
                 </div>
-                <div class="column is-8">
-                    <h1>Here in the middle is where i want to add about us and how we became to be. our start up story basically</h1>
+                <div className="column is-4 tstmnl">
+                    <p>" I've been drinking coffee for about 15 years now, and its crazy to say that i've never tried coffee like this." - Dean</p>
                 </div>
-                <div class="column is-2">
-                    <p>Same here as the other side a picture logo or phrase</p>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column is-4">
-                    <h1>Customer Testimonial</h1>
-                </div>
-                <div class="column is-4">
-                    <p>Customer Testimonial</p>
-                </div>
-                <div class="column is-4">
-                    <p>Customer Testimonial</p>
+                <div className="column is-4 tstmnl">
+                    <p>" I don't often drink coffee because it makes me jittery, so I really like their refreshment options. " - Barry</p>
                 </div>
             </div>
             <div className="columns">
                 <div className="column is-6">
-                    <p>Here I can insert maybe like a picture of the store or map</p>
+                    <p>Directions: 9654 E 105th Ave, Henderson CO, 80640</p>
                 </div>
                 <div className="column is-6">
-                    <p>Here I can Insert some sort of information</p>
+                    {/* <img src={Cup}></img> */}
                 </div>
             </div>
             <div className="columns">
