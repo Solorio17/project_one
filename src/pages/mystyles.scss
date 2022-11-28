@@ -1,4 +1,61 @@
 @charset 'utf-8';
 
 
+// about page styles
+
+
+.inspoOne {
+    background-color: #774532;
+}
+
+
+.inspoOne p {
+    text-align: center;
+    color: wheat;
+    font-size: 100px;
+    text-shadow: 3px 3px black;
+    font-family: fantasy;
+}
+
+;
+
+.inspoOne img {
+    border-radius: 10px;
+}
+
+.logo {
+    background-color: #774532;
+}
+
+.logo p {
+    text-align: center;
+    color: wheat;
+    font-size: xx-large;
+    font-family: fantasy;
+}
+
+;
+
+.ourstory {
+    font-size: xx-large;
+    font-family: fantasy;
+    text-align: center;
+    text-shadow: 1px 2px black;
+    color: wheat;
+    background-color: #774532;
+}
+
+;
+
+.tstmnl {
+    background-color: #3d3d3d;
+    text-align: center;
+    color: wheat;
+    font-size: larger;
+    font-family: fantasy;
+    font-style: italic;
+    text-shadow: 1px 2px black;
+
+}
+
 @import "~bulma/bulma.sass";
