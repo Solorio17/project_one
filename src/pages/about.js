@@ -56,7 +56,7 @@ const AboutPage = () => {
             </div>
             <div className="columns">
                 <div className="column is-6">
-                    <p>Directions: 9654 E 105th Ave, Henderson CO, 80640</p>
+                    <p>Directions: 100 Bear Drive, Cave Avenue, CO 80001</p>
                 </div>
                 <div className="column is-6">
                     {/* <img src={Cup}></img> */}
