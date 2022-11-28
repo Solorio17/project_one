@@ -1,17 +1,8 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import '../pages/mystyles.scss';
 
-// const burgerIcon = document.getElementById('#burger');
-// const navbarMenu = document.getElementById('#nav-links');
-
-// window.onload = function () {
-//     burgerIcon.addEventListener('click', () => {
-//         console.log('im clicked')
-//         navbarMenu.classList.toggle('is-active');
-//     });
-// }
-
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
+    const [isToggleOn, changeToggle] = useState(true);
 
     return (
         <div>
@@ -21,33 +12,33 @@ const Layout = ({ pageTitle, children }) => {
                         BEAR'S CUP OF COFFEE
                     </a>
 
-                    <a role="button" className="navbar-burger" aria-label="navbar-menu" aria-expanded="false">
+                    <a role="button" className={isToggleOn ? 'navbar-burger is-active' : 'navbar-burger'} aria-expanded="false" onClick={() => changeToggle(!isToggleOn)}>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
 
-                <div className="navbar-menu" id="navLinks">
+                <div className={isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'}>
                     <div className="navbar-start">
                         <a className="navbar-item" href='/menu'>
                             Our Menu
                         </a>
 
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
+                        <div className="navbar-item has-dropdown is-hoverable">
+                            <a className="navbar-link">
                                 More
                             </a>
 
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item" href='/about'>
+                            <div className="navbar-dropdown">
+                                <a className="navbar-item" href='/about'>
                                     About Us
                                 </a>
-                                <a class="navbar-item" href='/careers'>
+                                <a className="navbar-item" href='/careers'>
                                     Careers
                                 </a>
-                                <hr class="navbar-divider"></hr>
-                                <a class="navbar-item" href='/feedback'>
+                                <hr className="navbar-divider"></hr>
+                                <a className="navbar-item" href='/feedback'>
                                     Give us Feedback!
                                 </a>
                             </div>
@@ -67,13 +58,14 @@ const Layout = ({ pageTitle, children }) => {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav >
 
             <main>
                 {children}
             </main>
-        </div>
+        </div >
     )
 }
+
 
 export default Layout
