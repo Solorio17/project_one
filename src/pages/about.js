@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout";
 import './mystyles.scss';
 import FirstImage from '../images/roastedcoffee.jpg';
+import Cup from '../images/cupabout1.png'
 
 const AboutPage = () => {
     return (
@@ -25,10 +26,8 @@ const AboutPage = () => {
 
             <div className="columns is-gapless ">
                 <div className="column is-2 logo">
-                    <p>B</p>
-                    <p>C</p>
-                    <p>O</p>
-                    <p>C</p>
+                    <img src={Cup}></img>
+
                 </div>
                 <div className="column is-8">
                     <h1 className="ourstory">Bears Cup of Coffee came to life through the idea of the bear himself.
@@ -40,7 +39,8 @@ const AboutPage = () => {
                         will take your coffee drinking experience to the next level.</h1>
                 </div>
                 <div className="column is-2 logo">
-                    <p>"MAKE YOUR MORNINGS RIGHT."</p>
+                    <img src={Cup}></img>
+
                 </div>
             </div>
             <div className="columns">
@@ -55,16 +55,16 @@ const AboutPage = () => {
                 </div>
             </div>
             <div className="columns">
-                <div className="column is-6">
+                <div className="column is-6 undrtest">
                     <p>Directions: 100 Bear Drive, Cave Avenue, CO 80001</p>
                 </div>
-                <div className="column is-6">
-                    {/* <img src={Cup}></img> */}
+                <div className="column is-6 undrtest">
+                    <p>" Make your mornings right! "</p>
                 </div>
             </div>
             <div className="columns">
-                <div className="column is-12">
-                    <p>Here is the footer action</p>
+                <div className="column is-12 myfooter">
+                    <p>Copyright © Bear's Cup of Coffee 2022.</p>
                 </div>
             </div>
         </Layout>
