@@ -24,13 +24,14 @@
 }
 
 .logo {
-    background-color: #774532;
+    background-color: #f2f3f5;
+    color: black;
 }
 
 .logo p {
     text-align: center;
-    color: wheat;
-    font-size: xx-large;
+    color: #19191a;
+    font-size: x-large;
     font-family: fantasy;
 }
 
@@ -40,9 +41,8 @@
     font-size: xx-large;
     font-family: fantasy;
     text-align: center;
-    text-shadow: 1px 2px black;
-    color: wheat;
-    background-color: #774532;
+    color: black;
+    background-color: #f2f3f5;
 }
 
 ;
@@ -50,12 +50,24 @@
 .tstmnl {
     background-color: #3d3d3d;
     text-align: center;
-    color: wheat;
     font-size: larger;
     font-family: fantasy;
     font-style: italic;
-    text-shadow: 1px 2px black;
+    color: white;
+}
 
+.undrtest {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #774532;
+    color: white;
+    font-size: x-large;
+    font-family: fantasy;
+    text-shadow: 1px 1px #4d2c1f;
+}
+
+.myfooter {
+    text-align: center
 }
 
 @import "~bulma/bulma.sass";
