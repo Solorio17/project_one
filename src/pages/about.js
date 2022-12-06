@@ -10,7 +10,7 @@ const AboutPage = () => {
             <section className="hero is-dark">
                 <div className="hero-body">
                     <p className="title">
-                        About Us at Bear's
+                        About Us at Bear's Cup
                     </p>
                 </div>
             </section>
