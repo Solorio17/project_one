@@ -1,10 +1,40 @@
-import * as React from 'react';
+
+
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
+import { db } from './index';
+import { collection, getDocs } from 'firebase/firestore';
 import './mystyles.scss'
 
+
 const Menu = () => {
+
+    const [drinks, setDrinks] = useState([]);
+    const drinksCollectionRef = collection(db, "drinks")
+
+    useEffect(() => {
+        const getDrinks = async () => {
+            const data = await getDocs(drinksCollectionRef);
+            setDrinks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            console.log('im data', data)
+        }
+
+        getDrinks()
+    }, []);
     return (
         <Layout>
+
+            {drinks.map((drink) => {
+                return (
+                    <>
+                        <h1>Name: {drink.name}</h1>
+                        <h1 >Size: {drink.size}</h1>
+                        <h1 >Price: {drink.price}</h1>
+                    </>
+
+                )
+            })}
+
             <section className='hero is-dark'>
                 <div className='hero-body'>
                     <p className='title'> Our Menu</p>
@@ -44,10 +74,11 @@ const Menu = () => {
                     </tbody>
                 </table>
             </section>
-
         </Layout>
     )
-};
+}
+
+
 
 export const Head = () => <title>Our Menu</title>
 
