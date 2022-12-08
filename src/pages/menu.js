@@ -8,21 +8,31 @@ import './mystyles.scss'
 
 
 const Menu = () => {
+    const [isModalOpen, setModalToggle] = useState(true)
+
     const [newDrink, setNewDrink] = useState("");
     const [newSize, setNewSize] = useState("");
+    const [newPrice, setNewPrice] = useState(0);
 
     const [drinks, setDrinks] = useState([]);
     const drinksCollectionRef = collection(db, "drinks")
 
+
+    // console.log(isModalOpen);
+
     const createDrink = async () => {
-        await addDoc(drinksCollectionRef, { name: newDrink, size: newSize })
+        await addDoc(drinksCollectionRef, { name: newDrink, size: Number(newSize), price: Number(newPrice) })
     };
 
-    const updateDrink = async (id, price) => {
+
+
+    const updateDrink = async (id, name, size, price) => {
         const drinkDoc = doc(db, "drinks", id)
-        const newFields = { price: price + 1 }
+        // console.log(name)
+        const newFields = { name: name, size: Number(size), price: Number(price) }
         await updateDoc(drinkDoc, newFields)
     }
+
 
     useEffect(() => {
         const getDrinks = async () => {
@@ -33,21 +43,51 @@ const Menu = () => {
         getDrinks()
     }, []);
 
-    console.log('hello', process.env.GATSBY_APIKEY);
     return (
         <Layout>
-            <input placeholder="Drink Name..." onChange={(event) => { setNewDrink(event.target.value) }}></input>
+            <input placeholder="Drink Name..." onChange={(event) => { setNewDrink(event.target.value) }}>
+
+            </input>
             <input placeholder="Drink Size..." onChange={(event) => { setNewSize(event.target.value) }}></input>
+            <input placeholder="Price" onChange={(event) => { setNewPrice(event.target.value) }}></input>
+
             <button onClick={createDrink}>Create Drink</button>
             {drinks.map((drink) => {
+                console.log(drink.id);
                 return (
-                    <>
+                    <div key={drink.id}>
                         <h1>Name: {drink.name}</h1>
-                        <h1 >Size: {drink.size}</h1>
-                        <h1 >Price: {drink.price}</h1>
-                        <button onClick={() => updateDrink(drink.id, drink.price)}>Increase Price</button>
+                        <h1 >Size: {drink.size}oz</h1>
+                        <h1 >Price: ${drink.price}.99</h1>
+                        <h1>ID: {drink.id}</h1>
+                        {/* <button onClick={() => updateDrink(drink.id, drink.price)}>Increase Price</button> */}
+
+                        <button onClick={() => setModalToggle(!isModalOpen)}>Modal</button>
+                        <input placeholder={drink.name} onChange={(event) => { updateDrink(drink.id, event.target.value, drink.size, drink.price) }}></input>
+                        <input placeholder={drink.size} onChange={(event) => { updateDrink(drink.id, drink.name, event.target.value, drink.price) }}></input>
+                        <input placeholder={drink.price} onChange={(event) => { updateDrink(drink.id, drink.name, drink.size, event.target.value) }}></input>
+                        {/* <button onClick={console.log(drink.id, drink.name)}>Info</button> */}
+                        {/* <div className={isModalOpen ? 'modal' : 'modal is-active'} >
+                            <div className="modal-background"></div>
+                            <div className="modal-card">
+                                <header className="modal-card-head">
+                                    <p className="modal-card-title">Modal title</p>
+                                    <button onClick={() => setModalToggle(!isModalOpen)} className="modal-close is-large" aria-label="close"></button>
+
+                                </header>
+                                <section className="modal-card-body">
+                                    <input placeholder={drink.name}></input>
+                                    <input placeholder={drink.size}></input>
+                                    <input placeholder={drink.price}></input>
+                                </section>
+                                <footer className="modal-card-foot">
+                                    <button className="button is-success">Save changes</button>
+                                    <button className="button">Cancel</button>
+                                </footer>
+                            </div>
+                        </div> */}
                         <hr />
-                    </>
+                    </div>
                 )
             })}
 
@@ -90,7 +130,7 @@ const Menu = () => {
                     </tbody>
                 </table>
             </section>
-        </Layout>
+        </Layout >
     )
 }
 
