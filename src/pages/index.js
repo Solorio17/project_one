@@ -3,15 +3,15 @@ import Layout from "../components/layout";
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
-//this is the website application's firebase configuration
+// this is the website application's firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyACmhuH5xZPrFvmNBis8yVhBkyIY7O42vA",
-  authDomain: "project-two-10b81.firebaseapp.com",
+  apiKey: process.env.GATSBY_APIKEY,
+  authDomain: process.env.GATSBY_AUTHDOMAIN,
   projectId: "project-two-10b81",
-  storageBucket: "project-two-10b81.appspot.com",
-  messagingSenderId: "880831868881",
-  appId: "1:880831868881:web:d096e19ccdec760e0c3af0",
-  measurementId: "G-QTP3XEGQ8M"
+  storageBucket: process.env.GATSBY_STORAGEBUCKET,
+  messagingSenderId: process.env.GATSBY_MESSAGINGSENDERID,
+  appId: process.env.GATSBY_APPID,
+  measurementId: process.env.GATSBY_MEASUREMENTID
 };
 
 //initialize the firebase
