@@ -33,6 +33,7 @@ const Menu = () => {
         getDrinks()
     }, []);
 
+    console.log('hello', process.env.GATSBY_APIKEY);
     return (
         <Layout>
             <input placeholder="Drink Name..." onChange={(event) => { setNewDrink(event.target.value) }}></input>
