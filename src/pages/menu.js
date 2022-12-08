@@ -1,10 +1,55 @@
-import * as React from 'react';
+
+
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
+import { db } from './index';
+import { collection, getDocs, addDoc, doc, updateDoc } from 'firebase/firestore';
 import './mystyles.scss'
 
+
 const Menu = () => {
+    const [newDrink, setNewDrink] = useState("");
+    const [newSize, setNewSize] = useState("");
+
+    const [drinks, setDrinks] = useState([]);
+    const drinksCollectionRef = collection(db, "drinks")
+
+    const createDrink = async () => {
+        await addDoc(drinksCollectionRef, { name: newDrink, size: newSize })
+    };
+
+    const updateDrink = async (id, price) => {
+        const drinkDoc = doc(db, "drinks", id)
+        const newFields = { price: price + 1 }
+        await updateDoc(drinkDoc, newFields)
+    }
+
+    useEffect(() => {
+        const getDrinks = async () => {
+            const data = await getDocs(drinksCollectionRef);
+            setDrinks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            // console.log('im data', data)
+        }
+        getDrinks()
+    }, []);
+
     return (
         <Layout>
+            <input placeholder="Drink Name..." onChange={(event) => { setNewDrink(event.target.value) }}></input>
+            <input placeholder="Drink Size..." onChange={(event) => { setNewSize(event.target.value) }}></input>
+            <button onClick={createDrink}>Create Drink</button>
+            {drinks.map((drink) => {
+                return (
+                    <>
+                        <h1>Name: {drink.name}</h1>
+                        <h1 >Size: {drink.size}</h1>
+                        <h1 >Price: {drink.price}</h1>
+                        <button onClick={() => updateDrink(drink.id, drink.price)}>Increase Price</button>
+                        <hr />
+                    </>
+                )
+            })}
+
             <section className='hero is-dark'>
                 <div className='hero-body'>
                     <p className='title'> Our Menu</p>
@@ -44,10 +89,11 @@ const Menu = () => {
                     </tbody>
                 </table>
             </section>
-
         </Layout>
     )
-};
+}
+
+
 
 export const Head = () => <title>Our Menu</title>
 
