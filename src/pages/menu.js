@@ -5,11 +5,14 @@ import Layout from '../components/layout';
 import { db } from './index';
 import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import './mystyles.scss'
+import EditPage from './editpage';
 
 
 const Menu = () => {
     const [isModalOpen, setModalToggle] = useState(true)
     const [isDropDownOpen, setDropDownOpen] = useState(false)
+
+    const [modalData, setModalData] = useState({})
 
     // <create drink form state>
     const [newDrink, setNewDrink] = useState("");
@@ -20,29 +23,11 @@ const Menu = () => {
     const [drinks, setDrinks] = useState([]);
     const drinksCollectionRef = collection(db, "drinks");
 
-    // <update drink form state>
-    const [newDrinkName, setNewDrinkName] = useState('');
-    const [newDrinkSize, setNewDrinkSize] = useState(0);
-    const [newDrinkPrice, setNewDrinkPrice] = useState(0);
-    // </update drink form state>
-
-
     // <create drink function>
     const createDrink = async () => {
         await addDoc(drinksCollectionRef, { name: newDrink, size: Number(newSize), price: Number(newPrice) })
     };
     // </create drink function>
-
-    // <update drink function>
-    const updateDrink = async (id, name, size, price) => {
-        const drinkDoc = doc(db, "drinks", id)
-        // console.log(name)
-        const newFields = { name: name, size: Number(size), price: Number(price) }
-        await updateDoc(drinkDoc, newFields)
-        
-        window.location.reload();
-    }
-    // </update drink function>
 
     // <delete drink function>
     const deleteDrink = async (id) => {
@@ -56,13 +41,15 @@ const Menu = () => {
         const getDrinks = async () => {
             const data = await getDocs(drinksCollectionRef);
             setDrinks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-            // console.log('im data', data)
+            // console.log('im data', data.docs.map((doc) => ({...doc.data()})))
         }
         getDrinks()
+        console.log('drinks', drinks)
     }, []);
     // </get drinks function>
 
-
+    console.log('modalData', modalData)
+ 
     return (
         <Layout>
             <section className='hero is-dark'>
@@ -114,20 +101,22 @@ const Menu = () => {
                                 </tr>
    
                             </tbody>
-                        
                         </table>
-
-                        <button className="button is-info" onClick={() => setDropDownOpen(!isDropDownOpen)} >Edit Drink </button>
                         <button className='button is-danger' onClick={() => deleteDrink(drink.id)}>Delete</button>
-                        <input className='input' defaultValue={drink.name} onChange={(event) => { setNewDrinkName(event.target.value)}}></input>
-                        <input className='input' type='number' defaultValue={drink.size} onChange={(event) => { setNewDrinkSize(event.target.value)}}></input>
-                        <input className='input' type='number' defaultValue={drink.price} onChange={(event) => { setNewDrinkPrice(event.target.value)}}></input>
-                        <button className='button is-link' onClick={() => {updateDrink(drink.id, newDrinkName, newDrinkSize, newDrinkPrice)}}>Save Changes</button>
-                        <hr className="dropdown-divider"></hr>
-                        <hr className="dropdown-divider"></hr>
+                        <button className='button is-warning' onClick={() => {setModalData(drink); setDropDownOpen(!isDropDownOpen)}}>View</button>
+                        <EditPage id={drink.id} name={drink.name} size={drink.size} price={drink.price}></EditPage>
                     </section>
                 )
             })}
+               <div className={isDropDownOpen ? 'modal is-active' : 'modal'}>
+                            <div className="modal-background"></div>
+                                <div className="modal-content">
+                                    <h1>Name: {modalData.name}</h1>
+                                    <h1>Size: {modalData.size}</h1>
+                                    <h1>Price: {modalData.price}</h1>
+                                </div>
+                            <button className="modal-close is-large" aria-label="close" onClick={() => setDropDownOpen(!isDropDownOpen)}></button>
+                        </div>
             </section>
         </Layout >
     )
