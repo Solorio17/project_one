@@ -70,4 +70,33 @@
     text-align: center
 }
 
+
+
+.cardColor {
+    background-color: antiquewhite !important
+}
+
+.cardTitles p {
+    color: #e8574d;
+}
+
+;
+
+// .myInputs input {
+//     // background-color: antiquewhite;
+//     // box-shadow: none;
+//     // border-color: antiquewhite;
+//     // padding: 10%;
+// }
+
+// .myInputs input:hover {
+//     border-color: antiquewhite !important;
+//     border-bottom: #e8574d
+// }
+
+.createButton {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 @import "~bulma/bulma.sass";
