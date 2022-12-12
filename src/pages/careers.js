@@ -46,7 +46,7 @@ const Careers = () => {
                 </a>
 
                 <a class="panel-block">
-                    <span class="panel-icon">
+                    <span class="panel-icon">z
                         <i class="fas fa-code-branch" aria-hidden="true"></i>
                     </span>
                     Janitorial (! Please talk to Manager for this position !)
