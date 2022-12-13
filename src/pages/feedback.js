@@ -50,7 +50,6 @@ const Feedback = () => {
                     </div>
                 </div>
             </section>
-
         </Layout>
     )
 }
