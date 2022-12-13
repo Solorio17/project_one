@@ -1,75 +1,9 @@
 @charset 'utf-8';
 
 
-// about page styles
-
-
-.inspoOne {
-    background-color: #774532;
-}
-
-
-.inspoOne p {
-    text-align: center;
-    color: wheat;
-    font-size: 100px;
-    text-shadow: 3px 3px black;
-    font-family: fantasy;
-}
-
-;
-
-.inspoOne img {
-    border-radius: 10px;
-}
-
-.logo {
-    background-color: #f2f3f5;
-    color: black;
-}
-
-.logo p {
-    text-align: center;
-    color: #19191a;
-    font-size: x-large;
-    font-family: fantasy;
-}
-
-;
-
-.ourstory {
-    font-size: xx-large;
-    font-family: fantasy;
-    text-align: center;
-    color: black;
-    background-color: #f2f3f5;
-}
-
-;
-
-.tstmnl {
-    background-color: #3d3d3d;
-    text-align: center;
-    font-size: larger;
-    font-family: fantasy;
-    font-style: italic;
-    color: white;
-}
-
-.undrtest {
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #774532;
-    color: white;
-    font-size: x-large;
-    font-family: fantasy;
-    text-shadow: 1px 1px #4d2c1f;
-}
-
 .myfooter {
     text-align: center
 }
-
 
 
 .cardColor {
@@ -97,6 +31,32 @@
 .createButton {
     margin-left: 15%;
     margin-right: 15%;
+}
+
+.divider {
+    background-color: wheat;
+    height: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    // margin-bottom: 0px;
+}
+
+.imageHero {
+    padding-top: 30px !important;
+    position: relative !important;
+}
+
+.mySpan {
+    background-color: wheat;
+    position: absolute !important;
+    bottom: 30%;
+    // left: 50%;
+    text-align: center;
+    font-size: x-large
+}
+
+.shrtStory {
+    background-color: #e8574d;
 }
 
 @import "~bulma/bulma.sass";
