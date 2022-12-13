@@ -1,72 +1,131 @@
 import * as React from "react"
 import Layout from "../components/layout";
 import './mystyles.scss';
-import FirstImage from '../images/roastedcoffee.jpg';
+import LongImage from '../images/longimage.jpg';
 import Cup from '../images/cupabout1.png'
 
 const AboutPage = () => {
     return (
-        <Layout >
-            <section className="hero is-dark">
+        <Layout>
+            <section className="hero is-dark" name="top">
                 <div className="hero-body">
                     <p className="title">
                         About Us at Bear's Cup
                     </p>
                 </div>
             </section>
+            <hr className="divider"></hr>
+            <div className='tile is-ancestor'>
+                <div className='tile is-parent '>
+                    <div className='tile is-child box imageHero'>
+                        <img className="longImage" src={LongImage}></img>
+                        <div className="mySpan">" Happiness is not readymade, You must first wait for bear to brew it. "</div>
+                    </div>
+                </div>
+            </div>
+            <div className='tile is-ancestor'>
+                <div className='tile is-parent '>
+                    <div className='tile is-child box'>
+                        <h1 className="title">Our Story</h1>
+                        <div className="notification is-danger box">Image Icon Here </div>
+                        <button className="button is-small is-primary">Read More</button>
+                    </div>
+                    <div className='tile is-child box'>
+                        <h1 className="title">A&J's Beans</h1>
+                        <div className="notification is-danger box">Image Icon Here</div>
+                        <button className="button is-small is-warning">Read More</button>
+                    </div>
+                    <div className='tile is-child box'>
+                        <h1 className="title">How we give back</h1>
+                        <div className="notification is-danger box">Image Icon Here</div>
+                        <button className="button is-small is-success">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <div className="tile is-child box">
+                        Having served over 1 million cups of delicious coffee, here at Bear's Cup we aim to reach many millions more!
+                    </div>
+                </div>
+            </div>
+            <hr className="divider"></hr>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <div className="tile is-child box">
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="#top">About</a></li>
+                                <li class="is-active"><a href="#" aria-current="page">About Bear's Cup</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div className="hero-body is-dark notification">
+                <div class="columns">
+                    <div class="column">
+                        <h1 className="title is-4">About Bear's Cup</h1>
+                        <hr></hr>
+                        <p>
+                            Use lap as chair hell is other people but stare at ceiling light, for fat baby cat best buddy little guy. Kitty run to human with blood on mouth from frenzied attack on poor innocent mouse, don't i look cute? i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk but mewl for food at 4am.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h1 className="title is-4">Bear News Today</h1>
+                        <hr></hr>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h1 className="title is-4">Bear Blogs</h1>
+                        <hr></hr>
 
-            <div className="columns is-gapless is-vcentered inspoOne">
-                <div className="column is-6">
-                    <p>"This is the part where you enjoy your coffee."</p>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h1 className="title is-4">Follow Us</h1>
+                        <hr></hr>
+
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="column is-6">
-                    <img src={FirstImage} style={{ height: 'auto', width: '100vw' }}></img>
+                <div className="columns">
+                    <div className="column">
+                        <h1 className="title is-4">Links</h1>
+                        <hr></hr>
+
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div className="columns is-gapless ">
-                <div className="column is-2 logo">
-                    <img src={Cup}></img>
 
-                </div>
-                <div className="column is-8">
-                    <h1 className="ourstory">Bears Cup of Coffee came to life through the idea of the bear himself.
-                        "Meow Meow Meow meow Meow  Meow Meow Meow Meow"
-                        ("I Always saw my mother drink expensive cheap coffee, she had spent
-                        thousands of dollars, and I knew I needed to take action.
-                        "). 5 Great Roasts to Choose from, we sought to curate the best blend
-                        of coffee beans and happiness. Each blend has great unique flavors and
-                        will take your coffee drinking experience to the next level.</h1>
-                </div>
-                <div className="column is-2 logo">
-                    <img src={Cup}></img>
 
-                </div>
-            </div>
-            <div className="columns">
-                <div className="column is-4 tstmnl">
-                    <h1>" I am a first time customer here and I must say that i'm really enjoying this place." - Maria</h1>
-                </div>
-                <div className="column is-4 tstmnl">
-                    <p>" I've been drinking coffee for about 15 years now, and its crazy to say that i've never tried coffee like this." - Dean</p>
-                </div>
-                <div className="column is-4 tstmnl">
-                    <p>" I don't often drink coffee because it makes me jittery, so I really like their refreshment options. " - Barry</p>
-                </div>
-            </div>
-            <div className="columns">
-                <div className="column is-6 undrtest">
-                    <p>Directions: 100 Bear Drive, Cave Avenue, CO 80001</p>
-                </div>
-                <div className="column is-6 undrtest">
-                    <p>" Make your mornings right! "</p>
-                </div>
-            </div>
-            <div className="columns">
-                <div className="column is-12 myfooter">
-                    <p>Copyright © Bear's Cup of Coffee 2022.</p>
-                </div>
-            </div>
         </Layout>
     )
 }
