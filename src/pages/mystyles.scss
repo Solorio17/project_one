@@ -1,11 +1,5 @@
 @charset 'utf-8';
 
-
-.myfooter {
-    text-align: center
-}
-
-
 .cardColor {
     background-color: antiquewhite !important
 }
@@ -44,10 +38,11 @@
 .imageHero {
     padding-top: 30px !important;
     position: relative !important;
+    background-color: #dfbf83 !important;
 }
 
 .mySpan {
-    background-color: wheat;
+    background-color: rgba(245, 222, 179, .85);
     position: absolute !important;
     bottom: 30%;
     // left: 50%;
@@ -57,6 +52,39 @@
 
 .shrtStory {
     background-color: #e8574d;
+}
+
+.myNotification {
+    background-color: #dfbf83 !important;
+    // text-align: ;
+}
+
+.heroDivider {
+    background-color: wheat;
+}
+
+//accessing the / in the breadcrumb component
+.breadcrumb li+li::before {
+    color: wheat !important;
+}
+
+
+.customList li {
+    margin-bottom: 4% !important;
+
+}
+
+.customList li a {
+    text-decoration: none !important;
+}
+
+.customList li a:hover {
+    text-decoration: underline !important;
+}
+
+
+.myFooter {
+    text-align: center
 }
 
 @import "~bulma/bulma.sass";
