@@ -38,13 +38,13 @@
 .imageHero {
     padding-top: 30px !important;
     position: relative !important;
-    background-color: #dfbf83 !important;
+    // background-color: #dfbf83 !important;
 }
 
 .mySpan {
-    background-color: rgba(245, 222, 179, .85);
+    background-color: rgba(223, 191, 131, .90);
     position: absolute !important;
-    bottom: 30%;
+    bottom: 25%;
     // left: 50%;
     text-align: center;
     font-size: x-large
@@ -55,7 +55,7 @@
 }
 
 .myNotification {
-    background-color: #dfbf83 !important;
+    background-color: rgb(223, 191, 131) !important;
     box-shadow: none !important;
 }
 

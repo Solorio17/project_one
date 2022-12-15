@@ -18,7 +18,16 @@ const AboutPage = () => {
                 </div>
             </section>
             <hr className="divider"></hr>
-            <div className="container" style={{ marginBottom: '4%' }}>
+            <div className="container" style={{ marginBottom: '2%' }}>
+                <div className='tile is-ancestor'>
+                    <div className='tile is-parent '>
+                        <div className='tile is-child imageHero'>
+                            <img className="longImage" src={LongImage}></img>
+                            <div className="mySpan">" Happiness is not readymade, You must first wait for bear to brew it. "</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="columns is-5">
                     <div class="column">
                         <div class="myNotification has-text-centered">
