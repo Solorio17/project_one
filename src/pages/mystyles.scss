@@ -91,6 +91,60 @@
     border-radius: 0% !important;
 }
 
+
+.ourstoryModal {
+    background-color: #e8574d !important;
+
+}
+
+.ourstoryNotif {
+    background-color: #9a332c !important;
+    text-align: center;
+    opacity: 0.9;
+    box-shadow: 0 0 1em #ba8783 !important;
+    color: white;
+    max-width: 1000px;
+    padding-top: 10% !important;
+}
+
+///
+/// 
+.ajsbeansModal {
+    background-color: #0ea6e7 !important;
+}
+
+.ajsbeansNotif {
+    background-color: #05577b !important;
+    text-align: center;
+    opacity: 0.9;
+    width: 80%;
+    box-shadow: 0 0 1em #a6bec9;
+    color: white;
+}
+
+///
+/// 
+.givebackModal {
+    background-color: #4edc15 !important;
+}
+
+.givebackNotif {
+    background-color: #256e07 !important;
+    text-align: center;
+    opacity: 0.9;
+    width: 80%;
+    box-shadow: 0 0 1em #a9bca2;
+    color: white;
+}
+
+.myBtn {
+    margin-bottom: 10px;
+}
+
+.myIcons {
+    right: 40% !important;
+}
+
 .myFooter {
     text-align: center
 }
