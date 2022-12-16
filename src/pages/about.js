@@ -152,27 +152,27 @@ const AboutPage = () => {
 
             <div className={ourStoryIsOpen ? 'modal is-active' : 'modal'}>
                 <div class="modal-background ourstoryModal"></div>
-                <section className="hero is-large">
-                    <div className="modal-content">
-                        <div className="hero-body ourstoryNotif">
-                            <h1 className="title">About Bears Cup of Coffee</h1>
-                            <p>
-                                Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
-                            </p>
-                            <hr></hr>
-                            <h1 className="title">About Bears Cup of Coffee</h1>
-                            <p>
-                                Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
-                            </p>
-                            <hr></hr>
-                            <h1 className="title">About Bears Cup of Coffee</h1>
-                            <p>
-                                Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
-                            </p>
+                <div class="modal-content">
+                    <section className="hero is-large">
+                        <div className="notification ourstoryModal">
+                            <div className="tile is-ancestor">
+                                <div className="tile is-parent">
+                                    <div className="tile is-child notification ourstoryNotif">
+                                        <h1 className="title">Our Story at Bear's Cup of Coffee</h1>
+                                        <p>
+                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                        </p>
+                                        <hr></hr>
+                                        <h1 className="title">A&J's Beans</h1>
+                                        <p>
+                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                </section>
+                    </section>
+                </div>
                 <button class="modal-close is-large" aria-label="close" onClick={ourStoryToggle}></button>
             </div>
             <div className={ajsBeansIsOpen ? 'modal is-active' : 'modal'}>
