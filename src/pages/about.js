@@ -160,12 +160,25 @@ const AboutPage = () => {
                                     <div className="tile is-child notification ourstoryNotif">
                                         <h1 className="title">Our Story at Bear's Cup of Coffee</h1>
                                         <p>
-                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                            <h1>
+                                                Believe it or not, the first cups of coffee we sold were out of our old home's garage here in CO.
+                                                We Began receiving lots of great feedback from our close friends and family and we knew
+                                                we needed to scale. With great support from rounds of funding we were able to open
+                                                our first brick and mortar in 2018. It has been great to keep receiving support
+                                                from our loyal customers. We love our job because you love our coffee!
+                                            </h1>
                                         </p>
                                         <hr></hr>
-                                        <h1 className="title">A&J's Beans</h1>
+                                        <h1 className="title">Meet Bear</h1>
                                         <p>
-                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                            A&J's Beans was already succesful prior to this (more here),
+                                            So bear had an idea to create a partership to bring this coffee to
+                                            customers' hands. We were only doing retail at the time.
+                                            Anyways, bear has prior succesful business ventures and
+                                            elite marketing experience so he was a key piece in the creation of
+                                            bears cup. This landed him in the cover of Greatness Magazine. Bear
+                                            is always looking for ways to innovate and improve our business, and
+                                            creating lifelong parterships as well as build lifelong customers.
                                         </p>
                                     </div>
                                 </div>
@@ -174,7 +187,7 @@ const AboutPage = () => {
                     </section>
                 </div>
                 <button class="modal-close is-large" aria-label="close" onClick={ourStoryToggle}></button>
-            </div>
+            </div >
             <div className={ajsBeansIsOpen ? 'modal is-active' : 'modal'}>
                 <div class="modal-background ajsbeansModal"></div>
                 <div class="modal-content">
@@ -185,12 +198,27 @@ const AboutPage = () => {
                                     <div className="tile is-child notification ajsbeansNotif">
                                         <h1 className="title">A&J's Beans</h1>
                                         <p>
-                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                            A&J's Beans started in an online mom&pop shop.(Ayanna & Jason) in 2010. At
+                                            first we weren't receiving the attention we hoped to get. But with
+                                            the rise of social media and with bears elite marketing experience
+                                            we were able to receive more and more attention and praisings from customers.
+                                            Those first thousand bags were probably the most difficult to sell and produce.
+                                            With our investing we opened our first mill, and we were able to hire a great
+                                            team and that allowed us to being wholesale. Now we just opened our second mill
+                                            last year and we hope to reach many more people.
                                         </p>
                                         <hr></hr>
-                                        <h1 className="title">A&J's Beans</h1>
+                                        <h1 className="title">About Us</h1>
                                         <p>
-                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                            "Coffee was always something I drank, Iced coffee is my absolute fav,
+                                            but I started to notice that I was spending far too much money everyday.
+                                            I had savings from my successful beauty care salon. And decided to invest in
+                                            this Idea. - Ayanna"
+                                            <hr></hr>
+                                            "I must be honest before I met Ayanna I never really drank coffee. But the more
+                                            time I spent time with her and with seeing all the hundreds of coffee cups I saw her
+                                            drink. I eventually gave in. I also enjoy iced coffee, but I really pushed for us
+                                            to have other options and thats when we introduced our refreshers. - Jason"
                                         </p>
                                     </div>
                                 </div>
@@ -210,12 +238,26 @@ const AboutPage = () => {
                                     <div className="tile is-child notification givebackNotif">
                                         <h1 className="title">How we Give Back to our Earth!</h1>
                                         <p>
-                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                            Having experienced so much support from our friends and family, to our investors,
+                                            and now all our customers. We wanted to give back too! So we deciced that with
+                                            every cup of coffee sold in our stores, we would donate 10% of that sale
+                                            to Our Purpose Our Earth Foundation. And another 10% to Coffee Us Co.
                                         </p>
                                         <hr></hr>
-                                        <h1 className="title">How we Give Back to our Earth!</h1>
+                                        <h1 className="title">About Our Purpose Our Earth</h1>
                                         <p>
-                                            Meoooow cough furball into food bowl then scratch owner for a new one. Cats are a queer kind of folk relentlessly pursues moth. Pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Sleeps on my head mark territory. Paw at beetle and eat it before it gets away i'm going to lap some water out of my master's cup meow, lick human with sandpaper tongue scratch lick sellotape, refuse to come home when humans are going to bed;
+                                            Our Purpose Our Earth is a nonprofit organization that focuses on giving
+                                            back to our great green earth. With the funding we receive we use 100% of
+                                            that to plant trees, provide clean water to communites with no potable water by
+                                            builing pipelines, and we also help build schools to help everyone get an education.
+                                        </p>
+                                        <hr></hr>
+                                        <h1 className="title">About Coffee Us Co.</h1>
+                                        <p>
+                                            Also a nonprofit organization coffee us co, heavily focuses in sourcing the best
+                                            raw materials and best equipment to keep providing our customers with the best
+                                            coffee possible. Everything has been made possible through our loyal customers
+                                            along with every new customer we receive every day.
                                         </p>
                                     </div>
                                 </div>
@@ -226,7 +268,7 @@ const AboutPage = () => {
                 <button class="modal-close is-large" aria-label="close" onClick={givebackToggle}></button>
             </div>
 
-        </Layout>
+        </Layout >
     )
 }
 
