@@ -7,6 +7,7 @@ import {
     updateProfile,
     onAuthStateChanged,
     signOut,
+    sendPasswordResetEmail,
     signInWithEmailAndPassword,
     sendEmailVerification
 } from 'firebase/auth';
@@ -15,6 +16,15 @@ const Layout = ({ children }) => {
     const [isToggleOn, changeToggle] = useState(true);
     const [registerModalIsOpen, setRegisterModalIsOpen] = useState(false);
 
+    const [resetPassDropdown, setResetPassDropdown] = useState(false);
+    const showresetDropdown = () => {
+        setResetPassDropdown(!resetPassDropdown)
+    }
+
+    const [newPassword, setNewPassword] = useState('');
+
+
+    //open login/signup forms
     const openForms = () => {
         setRegisterModalIsOpen(!registerModalIsOpen)
     }
@@ -62,6 +72,18 @@ const Layout = ({ children }) => {
         window.location.reload()
 
     }
+
+    const resetPassword = async () => {
+        try {
+            const message = await sendPasswordResetEmail(auth, newPassword);
+            console.log(message)
+        } catch (err) {
+            alert(err)
+        }
+    }
+
+
+    console.log('current user', user)
 
     return (
         <div>
@@ -117,38 +139,48 @@ const Layout = ({ children }) => {
                                     <button className='button is-black is-small' onClick={openForms}>Sign Up</button>
                                 </>
                             }
-
                         </div>
                     </div>
                 </div>
             </nav >
-            <div class={registerModalIsOpen ? 'modal is-active' : 'modal'}>
-                <div class="modal-background"></div>
-                <div class="modal-content">
+            <div className={registerModalIsOpen ? 'modal is-active' : 'modal'}>
+                <div className="modal-background"></div>
+                <div className="modal-content">
                     <section className="hero is-fullheight" style={{ backgroundColor: "wheat" }}>
                         <div className="hero-body">
-                            <div>
+                            <div className='container'>
                                 <h1>Create a new account!</h1>
-                                <input placeholder="Email" onChange={(event) => { setRegisterEmail(event.target.value) }}></input>
-                                <input placeholder="Password" onChange={(event) => { setRegisterPassword(event.target.value) }}></input>
-                                <input placeholder="Name" onChange={(event) => { setRegisterName(event.target.value) }}></input>
-                                <button className="button is-info " onClick={register}>Create Account</button>
+                                <input className="input is-small" placeholder="Email" onChange={(event) => { setRegisterEmail(event.target.value) }}></input>
+                                <input className="input is-small" placeholder="Password" onChange={(event) => { setRegisterPassword(event.target.value) }}></input>
+                                <input className="input is-small" placeholder="Name" onChange={(event) => { setRegisterName(event.target.value) }}></input>
+                                <button className="button is-info is-small" onClick={register}>Create Account</button>
                             </div>
 
                             <hr></hr>
-                            <div>
-
+                            <div className='container'>
                                 <h1>Login into existing account!</h1>
-                                <input placeholder="Email" onChange={(event) => { setLoginEmail(event.target.value) }}></input>
-                                <input placeholder="Password" onChange={(event) => { setLoginPassword(event.target.value) }}></input>
-                                <button className="button is-success " onClick={login}>Log In</button>
+                                <input className="input is-small" placeholder="Email" onChange={(event) => { setLoginEmail(event.target.value) }}></input>
+                                <input className="input is-small" placeholder="Password" onChange={(event) => { setLoginPassword(event.target.value) }}></input>
+                                <button className="button is-success is-small" onClick={login}>Log In</button>
+                                <div className={resetPassDropdown ? 'dropdown is-active' : 'dropdown'}>
+                                    <div className="dropdown-trigger">
+                                        <button className="button is-small is-primary">
+                                            <span onClick={showresetDropdown}>Forgot Password?</span>
+                                        </button>
+                                    </div>
+                                    <div className="dropdown-menu">
+                                        <div className="dropdown-content">
+                                            <input className='input is-small' placeholder='your email' onChange={(event) => { setNewPassword(event.target.value) }}></input>
+                                            <hr className="dropdown-divider"></hr>
+                                            <button className='button is-small is-link' onClick={resetPassword}>Reset Password</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-
                         </div>
                     </section>
                 </div>
-                <button class="modal-close is-large" aria-label="close" onClick={openForms}></button>
+                <button className="modal-close is-large" aria-label="close" onClick={openForms}></button>
             </div>
 
             <main>
