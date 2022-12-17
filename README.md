@@ -2,4 +2,4 @@
 
 1.) clone or fork repository 
 2.) npm i to install all dependencies
-
+3.) npm run develop
